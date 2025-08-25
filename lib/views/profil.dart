@@ -14,7 +14,7 @@ class Profil extends StatelessWidget {
           "PROFIL LENGKAP",
           style: TextStyle(
             fontFamily: "Poppins",
-            fontSize: 20, // Diperkecil sedikit biar lebih proporsional
+            fontSize: 20,
             color: Colors.white,
             fontWeight: FontWeight.w600,
           ),
@@ -22,7 +22,7 @@ class Profil extends StatelessWidget {
         automaticallyImplyLeading: false,
         centerTitle: true,
         backgroundColor: Color(0xFF349A9B),
-        elevation: 4, // Tambah shadow untuk depth
+        elevation: 4,
         actions: [
           IconButton(
             onPressed: () {
@@ -31,9 +31,7 @@ class Profil extends StatelessWidget {
             },
             icon: Icon(Icons.logout, color: Colors.white),
             style: IconButton.styleFrom(
-              backgroundColor: Color(
-                0xFF2A7B7C,
-              ), // Warna lebih gelap untuk contrast
+              backgroundColor: Color(0xFF2A7B7C),
               padding: EdgeInsets.all(12.0),
             ),
           ),
@@ -46,7 +44,7 @@ class Profil extends StatelessWidget {
           image: DecorationImage(
             image: AssetImage("assets/images/foto/back.jpg"),
             fit: BoxFit.cover,
-            opacity: 0.9, // Sedikit transparan agar teks lebih mudah dibaca
+            opacity: 0.9,
           ),
         ),
         child: SafeArea(
@@ -55,7 +53,6 @@ class Profil extends StatelessWidget {
               children: [
                 const SizedBox(height: 30),
 
-                // Profile Avatar dengan shadow
                 Container(
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
@@ -106,7 +103,6 @@ class Profil extends StatelessWidget {
 
                 const SizedBox(height: 20),
 
-                // Stats Row dengan layout lebih rapi
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: Row(
@@ -130,7 +126,6 @@ class Profil extends StatelessWidget {
 
                 const SizedBox(height: 30),
 
-                // Bio Section dengan card
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: Container(
@@ -162,7 +157,6 @@ class Profil extends StatelessWidget {
 
                 const SizedBox(height: 40),
 
-                // Footer dengan gradient
                 Container(
                   padding: const EdgeInsets.symmetric(vertical: 16),
                   decoration: BoxDecoration(
@@ -199,7 +193,6 @@ class Profil extends StatelessWidget {
     );
   }
 
-  // Helper method untuk membuat info card
   Widget _buildInfoCard({required IconData icon, required String text}) {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
@@ -234,7 +227,6 @@ class Profil extends StatelessWidget {
     );
   }
 
-  // Helper method untuk membuat stat card
   Widget _buildStatCard({required IconData icon, required String label}) {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 20),

@@ -129,7 +129,8 @@ class _ProdukPageState extends State<ProdukPage> {
           );
           if (hasil != null) tambahProduk(hasil);
         },
-        child: const Icon(Icons.add),
+        backgroundColor: Colors.blue,
+        child: const Icon(Icons.add, color: Colors.black),
       ),
     );
   }

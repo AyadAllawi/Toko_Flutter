@@ -68,28 +68,6 @@ class _HalamanState extends State<Home> {
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 30),
-              // ElevatedButton(
-              //   onPressed: () {
-              //     // contoh ke halaman lain
-              //     Navigator.push(
-              //       context,
-              //       MaterialPageRoute(builder: (context) => const Cekbox()),
-              //     );
-              //   },
-              //   child: const Text("Lihat Drawer"),
-              // ),
-              // InkWell(
-              //   onTap: () {
-              //     Navigator.pushReplacement(
-              //       context,
-              //       MaterialPageRoute(builder: (context) => const Cekbox()),
-              //     );
-              //   },
-              //   child: const Text(
-              //     'Go to CheckBox',
-              //     style: TextStyle(fontSize: 18),
-              //   ),
-              // ),
             ],
           ),
         ),
