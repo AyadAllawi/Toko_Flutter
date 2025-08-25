@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_toko_sederhana/db/db_helper.dart';
 import 'package:flutter_toko_sederhana/model/transaksi.dart';
-import 'package:flutter_toko_sederhana/screens/laporan.dart';
 
 class TambahKeuangan extends StatefulWidget {
   static const id = '/add_transaction_screen';
@@ -61,8 +60,7 @@ class _TambahKeuanganState extends State<TambahKeuangan> {
                 onChanged: (newValue) {
                   setState(() {
                     selectedJenis = newValue!;
-                    selectedKategori =
-                        null; // Reset kategori ketika jenis berubah
+                    selectedKategori = null;
                   });
                 },
                 decoration: InputDecoration(labelText: 'Jenis Transaksi'),
@@ -87,7 +85,7 @@ class _TambahKeuanganState extends State<TambahKeuangan> {
               ),
               SizedBox(height: 16),
               DropdownButtonFormField<String>(
-                value: selectedKategori, // Gunakan variabel selectedKategori
+                value: selectedKategori,
                 items:
                     (selectedJenis == 'Pemasukan'
                             ? kategoriPemasukan
@@ -142,17 +140,14 @@ class _TambahKeuanganState extends State<TambahKeuangan> {
                     Transaksi newTransaksi = Transaksi(
                       jenis: selectedJenis,
                       jumlah: double.parse(jumlahController.text),
-                      kategori: selectedKategori!, // Gunakan selectedKategori
+                      kategori: selectedKategori!,
                       deskripsi: deskripsiController.text,
                       tanggal: selectedDate,
                     );
 
                     await DbHelper.addTransaksi(newTransaksi);
 
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => Report()),
-                    );
+                    Navigator.pop(context);
                   }
                 },
                 child: Text('Simpan Transaksi'),

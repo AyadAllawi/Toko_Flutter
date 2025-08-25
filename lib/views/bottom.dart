@@ -25,7 +25,7 @@ class Bottom extends StatelessWidget {
           destinations: const [
             NavigationDestination(icon: Icon(Iconsax.home), label: 'Home'),
             NavigationDestination(icon: Icon(Iconsax.shop_add), label: 'Store'),
-            NavigationDestination(icon: Icon(Iconsax.money), label: 'Laporan'),
+            NavigationDestination(icon: Icon(Iconsax.money), label: 'Report'),
             NavigationDestination(icon: Icon(Iconsax.user), label: 'Profile'),
           ],
         ),

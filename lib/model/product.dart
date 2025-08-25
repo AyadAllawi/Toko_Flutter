@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_toko_sederhana/screens/shopping_screens.dart';
 import 'package:flutter_toko_sederhana/screens/tambah_produk.dart';
 
 class ProdukModel {
@@ -28,13 +29,13 @@ class _ProdukPageState extends State<ProdukPage> {
       name: "Tenda Kecil",
       price: "Rp3.000",
       stok: 10,
-      image: "assets/images/foto/logo.jpg",
+      image: "assets/images/foto/tenda.jpg",
     ),
     ProdukModel(
       name: "Flysheet",
       price: "Rp5.000",
       stok: 15,
-      image: "assets/images/foto/logo.jpg",
+      image: "assets/images/foto/fly.jpg",
     ),
   ];
 
@@ -61,12 +62,24 @@ class _ProdukPageState extends State<ProdukPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "Stok Gudang Eiger",
+          "Eiger Store",
           style: TextStyle(fontFamily: 'Poppins', fontWeight: FontWeight.bold),
         ),
+        leading: Image.asset('assets/images/foto/logo.jpg'),
         automaticallyImplyLeading: false,
         backgroundColor: const Color.fromARGB(255, 198, 211, 198),
         centerTitle: true,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.shopping_bag, size: 30),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Shop()),
+              );
+            },
+          ),
+        ],
       ),
       body: ListView.builder(
         padding: const EdgeInsets.all(12),
